@@ -14,7 +14,6 @@ class LinkedList {
     if (this.head === null) {
       this.head = node;
     } else {
-      const tail = this.tail();
       tail.next = node;
     }
     return node;
