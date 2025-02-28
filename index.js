@@ -8,6 +8,7 @@ class LinkedList {
    * @param {*} value - The value to be added.
    * @returns {Node} - The created node.
    */
+
   append = (value) => {
     const node = new Node(value);
     const tail = this.tail();
@@ -23,6 +24,7 @@ class LinkedList {
    * Adds a new node to the beginning of the list.
    * @param {*} value - The value to be added.
    */
+
   prepend = (value) => {
     const node = new Node(value);
     node.next = this.head;
@@ -33,6 +35,7 @@ class LinkedList {
    * Returns the size of the list.
    * @returns {number} - The number of nodes in the list.
    */
+
   size = () => {
     let count = 0;
     let temp = this.head;
@@ -48,6 +51,7 @@ class LinkedList {
    * Returns the head node of the list.
    * @returns {Node} - The head node.
    */
+
   getHead = () => {
     return this.head;
   };
@@ -56,6 +60,7 @@ class LinkedList {
    * Returns the last node of the list.
    * @returns {Node} - The last node.
    */
+
   tail = () => {
     let lastNode = this.head;
     if (lastNode) {
@@ -72,6 +77,7 @@ class LinkedList {
    * @returns {Node} - The node at the index.
    * @throws {Error} - If the index is invalid.
    */
+
   at = (index) => {
     if (index <= 0) {
       throw new Error("Index: Negative");
@@ -97,6 +103,7 @@ class LinkedList {
    * Removes the last node from the list.
    * @throws {Error} - If the list is empty.
    */
+
   pop = () => {
     if (!this.head) {
       throw new Error("Can't delete");
@@ -123,6 +130,7 @@ class LinkedList {
    * @param {*} value - The value to check.
    * @returns {boolean} - True if the value exists, False otherwise.
    */
+
   contains = (value) => {
     let cur = this.head;
 
@@ -140,6 +148,7 @@ class LinkedList {
    * @param {*} value - The value to find.
    * @returns {number|null} - The index of the node or null if not found.
    */
+
   find = (value) => {
     let count = 0;
     let cur = this.head;
@@ -158,6 +167,7 @@ class LinkedList {
    * Returns a string representation of the list.
    * @returns {string} - The string representation of the list.
    */
+
   toString = () => {
     let cur = this.head;
     let result = "";
@@ -174,6 +184,7 @@ class LinkedList {
    * @param {number} index - The position where the value will be inserted.
    * @throws {Error} - If the index is invalid.
    */
+
   insertAt = (value, index) => {
     let cur = this.head;
     let prev = null;
@@ -205,6 +216,7 @@ class LinkedList {
    * @param {number} index - The position where the value will be inserted.
    * @throws {Error} - If the index is invalid.
    */
+  
   removeAt = (index) => {
     const size = this.size();
 
